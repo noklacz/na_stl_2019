@@ -1,6 +1,7 @@
 # STL 2019
 
-#build tests
+```
+# build tests
 mkdir bin
 cd bin
 cmake ..
@@ -16,7 +17,7 @@ ctest -R iterators
 
 #print outputs while running test
 ctest -R iterators -V
-
 //or just run
 [ 11:47AM ]  [ pawluch@archlinux:~/temp/na_stl_2019/bin(master✗) ]
  $ test/ut/iterators/iterators 
+ ```
