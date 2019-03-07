@@ -4,6 +4,18 @@
 void printAllRepetitions(const std::string& sentence)
 {
     /// Print all repetition of word 'all' in sentence
+    const std::string word = "all";
+    auto it = std::begin(sentence);
+    while (true)
+    {
+        it = std::search(it, end(sentence), begin(word), end(word));
+        if (it == std::end(sentence))
+        {
+            break;
+        }
+        std::cout << "Find word: " << word << " at position: " << std::distance(begin(sentence), it) << '\n';
+        std::advance(it, 1);
+    }
 }
 
 int main()

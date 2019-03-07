@@ -6,7 +6,12 @@
 bool isPalindrome(std::string text)
 {
     /// Using only algorithm and predicate check if sentence is palindrome
-    return true;
+    text.erase(std::remove_if(begin(text), end(text), ::isspace), std::end(text));
+    std::transform(begin(text), end(text), begin(text), ::tolower);
+    ato mid = std::begin(text) + (text.length() / 2);
+    const auto [it1, it2] = std::mismatch(begin(text), mid, rbegin(text));
+
+    return it1 == mid;
 }
 
 int main()

@@ -45,7 +45,8 @@ TEST(partial_sort_copy, should_sort_on_range)
 TEST(nth_element, reorders)
 {
     std::vector<int> v{6, 8, 7, 2, 8, 7, 0, 9, 3};
-    std::nth_element(v.begin(), v.end()+4, v.end());
     std::nth_element(v.begin(), v.begin()+3, v.end(), std::greater<int>());
     std::cout << "The third largest element is " << v[2] << '\n';
 }
+
+
