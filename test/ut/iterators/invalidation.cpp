@@ -5,6 +5,7 @@
 #include <gtest/gtest.h>
 #include <vector>
 #include <list>
+#include <algorithm>
 
 TEST(invalidation, shrink_to_fit)
 {
@@ -36,4 +37,13 @@ TEST(invalidation, remove_from_list_wrong_in_loop)
     }
     std::list<int> expected{1,3,4,5};
     EXPECT_EQ(expected, l);
+}
+
+TEST(invalidation, lists_are_safe)
+{
+    std::list<int> l{1,2,3,4,5,6};
+    auto it_3 = std::find_if(l.begin(), l.end(), [](const auto& item){return item==3;});
+    EXPECT_EQ(3, *it_3);
+    l.pop_front();
+    EXPECT_EQ(3, *it_3);
 }
