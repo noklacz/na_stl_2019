@@ -1,5 +1,5 @@
 /* TODO:
- * 1. Stworz dwie struktury Data: z pustym oraz niepustym wektorem liczb calkowitych
+ * 1. Stworz dwa obiekty typu Data: z pustym oraz niepustym wektorem liczb calkowitych
  * 2. Zaimplementuj funkcje doSomeComputing, przyjmujaca jako argumenty:
  *    - strukture Data
  *    - funkcje handler

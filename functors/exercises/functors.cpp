@@ -4,7 +4,8 @@
  *    przez dowolna inna liczbe, tj. IsDivisible(2)(4) ma zwrocic true.
  * 3. Stworz wektor 100 kolejnych rosnacych licz calkowitych z zakresu 0-99 i wyswietl
  *    jego zawartosc.
- * 4. Usun z wektora wszystkie liczby parzyste, podzielne przez 3 i 5.
+ * 4. Usun z wektora wszystkie liczby parzyste, nastepnie podzielne przez 3 i na koniec
+ *    podzielne przez 5.
  * 5. Usun z wektora wszystkie liczby pierwsze.
  */
 
